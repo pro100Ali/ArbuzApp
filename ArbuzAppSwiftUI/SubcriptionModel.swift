@@ -14,23 +14,12 @@ class SubscriptionModel: ObservableObject, Identifiable {
     @Published var subscriptionPeriod = ""
     @Published var address = ""
     @Published var phoneNumber = ""
-    
+    @Published var substatite = SubscriptionModel.self
     func subscribe(day: String, period: String, addressHouse: String, number: String) {
         isSubscribed = true
         dayOfTheWeek = day
         subscriptionPeriod = period
         address = addressHouse
         phoneNumber = number
-    }
-    
-    func unsubscribe() {
-        // Perform unsubscribe logic
-        isSubscribed = false
-        
-        // Clear the subscription details
-        dayOfTheWeek = ""
-        subscriptionPeriod = ""
-        address = ""
-        phoneNumber = ""
     }
 }

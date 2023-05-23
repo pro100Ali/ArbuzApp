@@ -14,7 +14,7 @@ struct PresentedView: View  {
     @State private var deliveryAddress = ""
     @State private var customerPhoneNumber = ""
     
-    @StateObject private var subscriptionModel = SubscriptionModel()
+    @StateObject var subscriptionModel = SubscriptionModel()
     
     let daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     let deliveryPeriods = ["Morning", "Afternoon", "Evening"]

@@ -11,7 +11,7 @@ import SwiftUI
 struct ArbuzAppSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(subscriptionItems: SubscriptionModel.init())
+            ContentView()
         }
     }
 }

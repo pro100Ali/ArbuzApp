@@ -10,6 +10,7 @@
 		414BA4D92A1CFD7F003DCE96 /* SubcriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BA4D82A1CFD7F003DCE96 /* SubcriptionView.swift */; };
 		414BA4DD2A1D0BFC003DCE96 /* SubcriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BA4DC2A1D0BFC003DCE96 /* SubcriptionModel.swift */; };
 		414BA4DF2A1D0D9C003DCE96 /* PresentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BA4DE2A1D0D9C003DCE96 /* PresentedView.swift */; };
+		414BA4E52A1D31B9003DCE96 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BA4E42A1D31B9003DCE96 /* BasketView.swift */; };
 		417FCE2B2A1BEDF90015C942 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417FCE2A2A1BEDF90015C942 /* SwiftUIView.swift */; };
 		41D745442A1B937300DC241E /* ArbuzAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D745432A1B937300DC241E /* ArbuzAppSwiftUIApp.swift */; };
 		41D745462A1B937300DC241E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D745452A1B937300DC241E /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 		414BA4D82A1CFD7F003DCE96 /* SubcriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcriptionView.swift; sourceTree = "<group>"; };
 		414BA4DC2A1D0BFC003DCE96 /* SubcriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcriptionModel.swift; sourceTree = "<group>"; };
 		414BA4DE2A1D0D9C003DCE96 /* PresentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedView.swift; sourceTree = "<group>"; };
+		414BA4E42A1D31B9003DCE96 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		417FCE2A2A1BEDF90015C942 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		41D745402A1B937300DC241E /* ArbuzAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArbuzAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D745432A1B937300DC241E /* ArbuzAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArbuzAppSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				41D745432A1B937300DC241E /* ArbuzAppSwiftUIApp.swift */,
 				41D745452A1B937300DC241E /* ContentView.swift */,
 				414BA4DC2A1D0BFC003DCE96 /* SubcriptionModel.swift */,
+				414BA4E42A1D31B9003DCE96 /* BasketView.swift */,
 				414BA4DE2A1D0D9C003DCE96 /* PresentedView.swift */,
 				414BA4D82A1CFD7F003DCE96 /* SubcriptionView.swift */,
 				417FCE2A2A1BEDF90015C942 /* SwiftUIView.swift */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414BA4E52A1D31B9003DCE96 /* BasketView.swift in Sources */,
 				414BA4DD2A1D0BFC003DCE96 /* SubcriptionModel.swift in Sources */,
 				41D745462A1B937300DC241E /* ContentView.swift in Sources */,
 				41D745442A1B937300DC241E /* ArbuzAppSwiftUIApp.swift in Sources */,

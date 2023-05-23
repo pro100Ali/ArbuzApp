@@ -9,11 +9,13 @@ import SwiftUI
 
 struct SubcriptionView: View {
     @State private var isSubscribed = false
-    @State private var subscriptionDetails: SubscriptionModel?
-    
+//    @ObservedObject  var subscriptionDetails: SubscriptionModel
+        @ObservedObject var subscriptionItems: SubscriptionModel
+        @Environment(\.dismiss) var dismiss
+
     var body: some View {
         NavigationView {
-            
+            Text("\(subscriptionItems.phoneNumber)eweqew")
 //            if subscriptions.isEmpty {
 //                Text("You have no subscriptions")
 //                    .font(.title)
@@ -30,7 +32,9 @@ struct SubcriptionView: View {
 //                                .foregroundColor(.gray)
 //                        }
 //                    }
-                }
+        }.onAppear {
+            print(subscriptionItems.dayOfTheWeek)
+        }
                 .navigationTitle("Subscriptions")
             }
         }
@@ -38,11 +42,6 @@ struct SubcriptionView: View {
 //}
 
 
-//struct SubcriptionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SubcriptionView(subscriptionModel: <#SubscriptionModel#>)
-//    }
-//}
 
 struct SubscriptionDetail: View {
     let subscription: SubscriptionModel

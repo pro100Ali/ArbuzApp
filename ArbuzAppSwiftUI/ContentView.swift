@@ -34,10 +34,10 @@ struct ContentView: View {
         
     ]
     @State private var basketItems: [BasketItem] = []
-    @ObservedObject var subscriptionItems: SubscriptionModel
     @State private var isPresented = false
     
-    
+    @StateObject private var subscription = SubscriptionModel()
+
     
 
     
@@ -80,7 +80,7 @@ struct ContentView: View {
             }
             
             
-            SubcriptionView()
+            SubcriptionView(subscriptionItems: subscription)
             
             .tabItem {
                 Label("Basket", systemImage: "pencil")
@@ -187,125 +187,13 @@ struct ProductView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(subscriptionItems: SubscriptionModel.init())
+        ContentView()
     }
 }
 
 
 
-struct BasketView: View {
-    @Binding var basketItems: [BasketItem]
-    @State private var isPresented = false
-    
-    var body: some View {
-        if basketItems.isEmpty {
-            Text("Your basket is empty.")
-                .font(.title)
-                .foregroundColor(.gray)
-                .padding()
-        } else {
-            VStack(spacing: 10) {
-                ForEach(basketItems) { item in
-                    HStack {
-                        Image(item.product.image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 50, height: 50)
-                            .clipped()
-                        Text(item.product.name)
-                        Spacer()
-                        
-                        Text("Count: \(String(format: "%.2f", item.count))")
-                        
-                        Text("Total cost: \((item.product.price * Int(item.count)))")
-                    }
-                }
-                Spacer()
-                
-                Button {
-                    isPresented.toggle()
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 16).foregroundColor(.green).frame(height: 60)
-                        Text("Subscribe").foregroundColor(.white)
-                    }
-                }.sheet(isPresented: $isPresented) {
-                    PresentedView()
-                }
-            }
-            .padding()
-            .listStyle(InsetGroupedListStyle())
-        }
-  
-    }
-    
-    
-    var someView: some View {
-        VStack(spacing: 16) {
-            VStack{
-                VStack {
-                    Button {
-                        isPresented = false
-                    } label: {
-                        Image(systemName: "xmark")
-                            .foregroundColor(.gray)
-                            .bold()
-                        
-                    }
-                    .padding(.bottom, 30)
-                    .padding(.leading, 350)
-                }
-                
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Title")
-                        .font(.custom("Helvetica", size: 15))
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.gray.opacity(0.2))
-                        
-                        //                        TextField("Bookmark title",q text: $firstName)
-                            .padding()
-                    }.frame(height: 46)
-                    
-                }
-                
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Link")
-                        .font(.custom("Helvetica", size: 15))
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.gray.opacity(0.2))
-                        
-                        //                        TextField("Bookmark link (URL)", text: $lastName)
-                            .padding()
-                    }.frame(height: 46)
-                    
-                }
-            }.padding()
-            
-            
-            
-            //            Button {
-            //                withAnimation {
-            //                    arrayNames.append(firstName)
-            //                    arrayLinks.append(lastName)
-            //                }
-            //                firstName = ""
-            //                lastName = ""
-            //            } label: {
-            //                ZStack {
-            //                    RoundedRectangle(cornerRadius: 10)
-            //                        .fill(Color.black)
-            //                    Text("Save")
-            //                }
-            //            }
-            //            .frame(width: 358, height: 58)
-            //            .foregroundColor(.white)
-            //            .background(Color.black)
-            //            .cornerRadius(13)
-        }
-    }
-}
+
 
 
 extension Double {
