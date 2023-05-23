@@ -31,7 +31,7 @@ struct BasketView: View {
                         
                         Text("Count: \(String(format: "%.2f", item.count))")
                         
-                        Text("Total cost: \((item.product.price * Int(item.count)))")
+                        Text("Total cost: \((item.product.price * Int(item.count))) tg ").foregroundColor(.green)
                     }
                 }
                 Spacer()

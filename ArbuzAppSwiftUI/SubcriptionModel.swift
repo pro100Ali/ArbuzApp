@@ -14,7 +14,6 @@ class SubscriptionModel: ObservableObject, Identifiable {
     @Published var subscriptionPeriod = ""
     @Published var address = ""
     @Published var phoneNumber = ""
-    @Published var substatite = SubscriptionModel.self
     func subscribe(day: String, period: String, addressHouse: String, number: String) {
         isSubscribed = true
         dayOfTheWeek = day
