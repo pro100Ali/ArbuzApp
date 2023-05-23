@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "1405-1380_61_moyo_packs3_4_1000ml_1_5_ed.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
